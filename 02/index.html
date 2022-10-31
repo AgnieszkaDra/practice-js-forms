@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Mateusz Bogolubow">
     <title>devmentor.pl - JS Forms - #02</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="" method="post">
@@ -13,7 +14,7 @@
             <label for="formLogin">
                 email:
             </label>
-            <input id="formLogin" name="login" type="email" /> 
+            <input id="formLogin" name="login"  /> 
         </div>
         <div>
             <label for="formPass1">
@@ -27,16 +28,12 @@
             </label>
             <input id="formPass2" name="pass2" type="password" />
         </div>
+            <input type="checkbox" id="acc" name="acc">
+            <label for="acc">I accept regulations:</label></br>
         <div>
-            <label for="formAccept">
-                I accept regulations:
-            </label>
-            <input id="formAccept" name="accept" type="checkbox" /> 
-        </div>
-        <div>
-            <input type="submit" value="register" />
-        </div>
-    </form>
+            <input type="submit" value="register" /> 
+        </div> 
+    </form> 
 
     <script src="app.js"></script>
 </body>
