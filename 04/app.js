@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', init);
+const input = document.querySelector('input')
+const color = document.querySelector('input[name="color"]')
+const opacity = document.querySelector('input[name="opacity"]')
+const box = document.querySelector('.box')
+
+input.addEventListener('input', function(e){
+
+    let theColor = color.value;
+   let opacity2 = opacity.value / 100
+    e.style.boxShadow = setBoxShadow(box, theColor, opacity2)
+})
+
+
 
 function init() {
     const boxElement = document.querySelector('.box');
