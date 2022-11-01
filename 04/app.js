@@ -4,13 +4,21 @@ const color = document.querySelector('input[name="color"]')
 const opacity = document.querySelector('input[name="opacity"]')
 const box = document.querySelector('.box')
 
-input.addEventListener('input', function(e){
 
+color.addEventListener('change', function(e){
     let theColor = color.value;
-   let opacity2 = opacity.value / 100
-    e.style.boxShadow = setBoxShadow(box, theColor, opacity2)
+    setBoxShadow(box, theColor, opacity.value)
 })
 
+
+
+function opacityChange() {
+    let opacity2 = opacity.value / 100
+    console.log(opacity2)
+    setBoxShadow(box, color.value, opacity2)
+}
+opacity.addEventListener('change', opacityChange)
+opacity.addEventListener('mousemove', opacityChange)
 
 
 function init() {
